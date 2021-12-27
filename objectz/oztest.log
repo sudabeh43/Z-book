@@ -1,0 +1,196 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=latex 2019.7.14)  6 OCT 2019 09:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**oztest.tex
+(./oztest.tex
+LaTeX2e <2018-12-01>
+(c:/texlive/2019/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(c:/texlive/2019/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/texlive/2019/texmf-dist/tex/latex/objectz/oz.sty
+Package: oz 1999/05/24 2.46 Object Z macros
+
+`Object-Z Macros' 2.46 <1999/05/24>
+(c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+)
+\c@mv@oz=\count91
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `oz'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `oz'
+(Font)                  OT1/cmr/bx/n --> OT1/cmr/bx/n on input line 71.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `oz'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 71.
+\symitalics=\mathgroup4
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 71.
+\symlasy=\mathgroup5
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring math symbol \sqsubset on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \sqsupset on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \mho on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 362.
+\z@combox=\box28
+\z@wdcalc=\dimen106
+\z@stackmin=\count92
+\z@stackmax=\count93
+\z@stacktop=\count94
+\@gtempa=\dimen107
+\@gtempa=\dimen108
+\@gtempa=\dimen109
+\@gtempa=\dimen110
+\@gtempa=\dimen111
+\@gtempa=\dimen112
+\@gtempa=\dimen113
+\@gtempa=\dimen114
+\@gtempa=\dimen115
+\@gtempa=\dimen116
+\@gtempa=\dimen117
+\@gtempa=\dimen118
+\@gtempa=\dimen119
+\@gtempa=\dimen120
+\@gtempa=\dimen121
+\@gtempa=\dimen122
+\@gtempa=\dimen123
+\@gtempa=\dimen124
+\@gtempa=\dimen125
+\@gtempa=\dimen126
+\@gtempa=\dimen127
+\@gtempa=\dimen128
+\@gtempa=\dimen129
+\@gtempa=\dimen130
+\@gtempa=\dimen131
+\@gtempa=\dimen132
+\@gtempa=\dimen133
+\@gtempa=\dimen134
+\@gtempa=\dimen135
+\@gtempa=\dimen136
+\@gtempa=\dimen137
+\@gtempa=\dimen138
+\@gtempa=\dimen139
+\@gtempa=\dimen140
+\@gtempa=\dimen141
+\@gtempa=\dimen142
+\@gtempa=\dimen143
+\@gtempa=\dimen144
+\@gtempa=\dimen145
+\@gtempa=\dimen146
+\@gtempa=\dimen147
+\@gtempa=\dimen148
+\@gtempa=\dimen149
+\@gtempa=\dimen150
+\@gtempa=\dimen151
+\@gtempa=\dimen152
+\@gtempa=\dimen153
+\@gtempa=\dimen154
+\@gtempa=\dimen155
+\@gtempa=\dimen156
+\z@curline=\box29
+\z@curindent=\dimen157
+\z@curfield=\box30
+\zedindent=\dimen158
+\zedleftsep=\dimen159
+\zedtab=\dimen160
+\zedbar=\dimen161
+\zedlinethickness=\dimen162
+\zedcornerheight=\dimen163
+\z@cols=\count95
+\zedbaselineskip=\skip46
+\zstrutbox=\box31
+\interzedlinepenalty=\count96
+\preboxpenalty=\count97
+\forcepagepenalty=\count98
+\z@adskip=\skip47
+\z@bdskip=\skip48
+\z@adsskip=\skip49
+\z@bdsskip=\skip50
+\z@temp=\dimen164
+)
+No file oztest.aux.
+\openout1 = `oztest.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 8.
+(c:/texlive/2019/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 8.
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 8.
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (76.46011pt too wide) in alignment at lines 40--52
+[] []
+ []
+
+*************************************
+If you get large overfull vboxes now, Oz is not working
+*************************************
+
+Overfull \hbox (124.7215pt too wide) in alignment at lines 61--205
+[] [] 
+ []
+
+[1
+
+] [2] [3] [4] [5] [6] (./oztest.aux) ) 
+Here is how much of TeX's memory you used:
+ 1025 strings out of 492610
+ 9561 string characters out of 6132844
+ 107241 words of memory out of 5000000
+ 4998 multiletter control sequences out of 15000+600000
+ 9452 words of font info for 37 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 24i,11n,29p,213b,143s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on oztest.dvi (6 pages, 24080 bytes).

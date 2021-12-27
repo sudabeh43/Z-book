@@ -1,0 +1,122 @@
+2016-12-08  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION: New version is 1.0-21.
+
+	* inst/CITATION: Canonicalize CRAN URLs.
+
+2016-01-06  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* inst/CITATION: Avoid personList().
+
+2014-01-14  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-20.
+
+	* NAMESPACE: Improved.
+
+2011-09-18  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-19.
+
+	* NAMESPACE: Added.
+
+2009-09-10  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-18.
+
+	* inst/CITATION: Improve.
+
+2009-02-05  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-17.
+
+	* inst/CITATION: Improve.
+
+2007-07-12  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-16.
+	(License): Clarify.
+
+2007-02-01  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-15.
+
+	* inst/CITATION: Get date/year and version from the package
+	metadata.
+
+2006-09-09  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-14.
+	(Depends): Added.
+
+2006-06-23  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-13.
+
+	* inst/CITATION: New file.
+
+2006-06-21  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-12.
+
+	* man/oz.Rd: Move \synopsis to \usage.
+
+2006-02-09  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-11.
+
+	* R/oz.R (oz): Extra parameters should be passed on to lines(), as
+	documented.  Spotted by Peter Dunn <dunn@usq.edu.au>.
+
+2004-10-13  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-10.
+
+	* R/oz.R:
+	* man/oz.R:
+	Changes by Paul Murrell: new function ozRegion(), change several
+	argument defaults of oz() to NULL, as missingness of arguments
+	cannot be passed on whereas being NULL can.
+
+2004-01-31  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-9.
+
+	* INDEX: Removed.
+	* TITLE: Removed.
+
+2003-12-18  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-8.
+
+	* man/oz-internal.Rd: Change keyword to 'internal'.
+
+2003-04-23  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-7.
+	(Author, Maintainer): Update KH email address.
+
+2001-05-12  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-6.
+
+	* man/oz-internal.Rd: New file.
+	* man/oz-states.Rd: New file.
+
+2000-12-24  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-5.
+	(Maintainer): New entry.
+
+2000-12-19  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-4.
+	(Title): Added.
+
+	* TITLE: Removed.
+
+Tue Feb 24 23:17:20 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* README:  Copyright is now with KH.
+
+	* ChangeLog:  Finally started, current version is 1.0-3.

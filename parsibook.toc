@@ -1,0 +1,58 @@
+\contentsline {chapter}{پیش‌گفتار}{ث}{section*.1}% 
+\contentsline {chapter}{\numberline {1}مقدمه ای بر توصیف رسمی برنامه ها و سیستم ها}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}اولین مثال از توصیف رسمی یک برنامه}{3}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}معرفی Z}{5}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}عناصر Z}{9}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}مجموعه ها}{9}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}رابطه ها}{11}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}توابع}{13}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}دنباله ها}{15}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}کیسه ها}{16}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}شِما و ترکیب شِما}{18}{section.3.6}% 
+\contentsline {chapter}{\numberline {4} چند نمونه ساده توصیف Z}{25}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}نمونه اول: کتابچه تولد}{25}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}نمونه دوم: تجزیه متن به واژگان}{35}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}نمونه سوم: سیستم کنترل اسناد}{39}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}نمونه چهارم: ماشین حالت متناهی}{43}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}دیاگرام انتقال حالت}{43}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}جدول انتقال حالت}{44}{subsection.4.4.2}% 
+\contentsline {chapter}{\numberline {5} مستندسازی سرویس شبکه با استفاده از Z}{45}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}مقدمه}{45}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}توصیف سرویس}{45}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}مستندسازی سرویس}{45}{section.5.3}% 
+\contentsline {chapter}{\numberline {6} واژگان ماشین}{47}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}مقدمه}{47}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}سازماندهی واژه}{47}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}عملیات روی واژگان}{47}{section.6.3}% 
+\contentsline {chapter}{\numberline {7} توصیف سیستم فایل}{49}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}فاصل برنامه نویسی}{49}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}عملیات بر روی فایل ها}{54}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}سیستم فایل}{54}{section.7.3}% 
+\contentsline {section}{\numberline {7.4}تحلیل رسمی}{54}{section.7.4}% 
+\contentsline {chapter}{\numberline {8}نمونه هایی از کدهای لاتک جهت آموزش}{57}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}یادآوری حدهای یک‌طرفه و کاربرد آن‌ها}{57}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}انتگرال معین و نامعین و کاربرد آن در مهندسی}{61}{section.8.2}% 
+\contentsline {subsection}{\numberline {8.2.1}انتگرال معین}{61}{subsection.8.2.1}% 
+\contentsline {subsection}{\numberline {8.2.2}منحنی‌های قاطع یکدیگر}{61}{subsection.8.2.2}% 
+\contentsline {section}{\numberline {8.3}محاسبهٔ طول منحنی‌ها با روشی ابتکاری}{65}{section.8.3}% 
+\contentsline {section}{\numberline {8.4}انتگرال‌های ناسره}{66}{section.8.4}% 
+\contentsline {section}{\numberline {8.5}محاسبهٔ حجم جسم‌های حاصل از دوران}{67}{section.8.5}% 
+\contentsline {subsection}{\numberline {8.5.1}حجم حاصل از دوران حول محور $x$ها}{67}{subsection.8.5.1}% 
+\contentsline {subsection}{\numberline {8.5.2}حجم حاصل از دوران حول محور $y$ها}{68}{subsection.8.5.2}% 
+\contentsline {section}{\numberline {8.6}قواعد انتگرال‌گیری نامعین}{70}{section.8.6}% 
+\contentsline {section}{\numberline {8.7}تکنیک‌های انتگرال‌گیری}{70}{section.8.7}% 
+\contentsline {subsection}{\numberline {8.7.1}انتگرال‌گیری جزء به جزء}{70}{subsection.8.7.1}% 
+\contentsline {subsection}{\numberline {8.7.2}جانشینی ساده‌کننده}{71}{subsection.8.7.2}% 
+\contentsline {subsection}{\numberline {8.7.3}کسرهای جزیی}{71}{subsection.8.7.3}% 
+\contentsline {section}{\numberline {8.8}ظاهر شدن انتگرال اصلی در فرایند انتگرال‌گیری}{72}{section.8.8}% 
+\contentsline {section}{\numberline {8.9}سه جانشینی بنیادی}{74}{section.8.9}% 
+\contentsline {section}{تمرین‌ها}{75}{section*.72}% 
+\contentsline {section}{تمرین‌ها}{77}{section*.74}% 
+\contentsline {chapter}{\numberline {\norfont آ}چند یادآوری اساسی}{79}{appendix.Alph1}% 
+\contentsline {section}{\numberline {\norfont آ.1}استقرای ریاضی و چند مثال}{79}{section.Alph1.1}% 
+\contentsline {section}{\numberline {\norfont آ.2}مشتق‌های جزئی}{80}{section.Alph1.2}% 
+\contentsline {section}{\numberline {\norfont آ.3}بسط تیلور}{80}{section.Alph1.3}% 
+\contentsline {section}{\numberline {\norfont آ.4}مختصات قطبی}{81}{section.Alph1.4}% 
+\contentsline {section}{\numberline {\norfont آ.5}بردارها در فضا و خواص آن‌ها}{82}{section.Alph1.5}% 
+\contentsline {section}{\numberline {\norfont آ.6}ضرب برداری}{84}{section.Alph1.6}% 
+\contentsline {chapter}{پاسخ تمرین‌های برگزیده}{85}{section*.76}% 

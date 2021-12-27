@@ -1,0 +1,540 @@
+
+\chapter{عناصر Z}\label{chapter3}
+\paragraphfootnotes
+\section{مجموعه ها}\index{sets}
+یک مجموعه، دسته ای از اشیا خوش تعریف است. مجموعه ها گاهی با لیستی از تمامی عناصرشان نشان داده می شوند. به عنوان مثال مجموعه اعداد طبیعی زوج کوچتر یا مساوی 10، برابر است با
+ \[
+ \{2, 4, 6, 8, 10\}
+ \]
+مجموعه ها ممکن است با بکارگیری برخی از عملیات بر روی دیگر مجموعه ها ایجاد شوند. برای مثال مجموعه اعداد طبیعی زوج کوچکتر مساوی 10، با استفاده از عملگرهای مجموعه، بصورت زیر تعربف می شود:
+\[
+\{n:\mathbb{N}|n\ne0 \land n<10 \land  n  mod  2=0 \bullet n\}
+\]
+تعریف مجموعه فوق شامل سه بخش است. بخش اول، امضای مجموعه است که بصورت $n:\mathbb{N}$
+ نشان داده شده است. بخش اول با استفاده از خط عمودی | از بخش دوم جدا می شود. بخش دوم با استفاده از یک شرط بیان بیان می شود. در مثال فوق این شرط عبارت است از 
+ $n\ne o \land n<10 \land n mod 2=0 $.
+ بخش دوم با استفاده از 
+ $\bullet $
+  از بخش سوم جدا شده است. بخش سوم یک عبارت است که در مثال فوق این عبارت $n$ می باشد. این عبارت ممکن است عبارت پیچیده تری باشد مانند 
+ $\log (n^2)$ .
+ 
+ در ریاضیات تنها یک مجموعه تهی وجود دارد. در Z یک مجموعه تهی برای هر نوع از مجموعه ها وجود دارد. ازاینرو به تعداد نامتناهی مجموعه تهی در Z وجود دارد. مجموعه تهی بصورت 
+ $\varnothing [X]$
+  تعریف می شود که در آن X نوع مجموعه تهی را نشان می دهد. اگر نوع واضح باشد، نیازی به نوشتن X نیست.
+ 
+ در Z عملگرهای متنوعی برای مجموعه ها وجود دارد مانند اجتماع، اشتراک، تفاوت مجموعه ها و تفاوت متقارن. مجموعه توانی یک مجموعه مانند X، شامل تمام زیرمجموعه های مجموعه X است و با 
+ $\mathbb{P}X$
+ نشان داده می شود. مجموعه زیرمجموعه های غیرتهی X با 
+ $\mathbb{P}_1 X$
+ نشان داده می شود که در آن
+ \[
+ \mathbb{P}_1 ==\{ U: \mathbb{P} X|U\neq \varnothing[X]\}
+ \]
+ یک مجموعه متناهی از عناصر نوع X که با 
+ $\bold F X$
+ نشان داده می شود، زیرمجموعه ای از X است که نمی تواند یک تناظر یک به یک با زیرمجموعه خاصی از خودش داشته باشد. تعریف 
+ $\bold F X$
+ بصورت زیر است.
+ \[
+ \bold F X== \{ U:\mathbb{P}X| \neg \exists V : \mathbb{P} U \bullet V \neq U \land ( \exists f:V \to U)\}
+\] 
+
+عبارت
+ $f:V\longmapsto U $
+ بیان می دارد که f یک رابطه یک به یک از U به V است که در آن هر عضو از مجموعه U دقیقا به یک عضو از مجموعه V نگاشت می شود و برعکس.
+ 
+ Z یک زبان نوع دار است به این معنا که متغیر در هنگام تعریفش، برای اولین بار اعلان می شود. تعریف متغیر با استفاده از سورهای عمومی و وجودی انجام می گردد. برای مثال 
+ \[
+ \forall j:J \bullet P \Rightarrow Q
+ \]
+ .
+ 
+ کمیت وجودی یکتا بصورت 
+ $\exists _1 j:J|P$
+ تعریف می شود. این تعریف بیان می کند که دقیقا یک j از نوع J وجود دارد که دارای ویژگی P است.   
+
+
+
+\section{رابطه ها}\index{رابطه ها}
+رابطه R میان X و Y زیرمجموعه ای از ضرب کارتزین X و Y است; یعنی 
+$R \subseteq (X \times Y)$.
+رابطه در Z بصورت
+$R: X \longleftrightarrow Y$
+نمایش داده می شود. رابطه  
+$ x \mapsto y$
+نشاندهنده این است که زوج 
+$ (x,y) \in R$.
+\\
+توجه کنید که رابطه 
+$ home\_owner : Person \longleftrightarrow Home $
+بین افراد و خانه هایشان برقرار است. رابطه 
+$ daphne \longmapsto mandalay \in home\_owner $
+بیان می دارد که $daphne$ مالک $mandalay$ است. همچنین امکان دارد که یک شخص بیش از یک خانه داشته باشد:
+\[
+rebecca \longmapsto nirvana \in home\_owner
+\\
+rebecca \longmapsto tivoli \in home\_owner
+\]
+همچنین ممکن است دو نفر بصورت مشترک مالک خانه ای باشند:
+\[
+rebecca \longmapsto nirvana \in home\_owner
+\\
+lawrence \longmapsto nirvana \in home\_owner
+\] 
+ممکن است افرادی وجود داشته باشند که مالک هیچ خانه ای نیستند. بنابراین، برای آنها، ورودی در رابطه $home\_owner$ وجود ندارد. نوع $Person$ شامل هر فرد ممکنی است و نوع $Home$ دربرگیرنده هر خانه ممکنی می باشد. دامنه رابطه $home\_owner$ بصورت زیر تعریف می شود:
+
+\[
+x \in  \dom \enspace  home\_owner \Leftrightarrow \exists h : Home . x \longmapsto h \in home\_owner
+\]
+
+
+برد رابطه $home\_owner$ را نیز می توان بصورت زیر تعریف کرد:
+\[
+h \in  \ran \enspace home\_owner \Leftrightarrow \exists x : Person . x \longmapsto h \in home\_owner
+\]
+ترکیب دو رابطه 
+$home\_owner:Person\leftrightarrow Home$
+و
+$home\_value: Home \leftrightarrow Value$
+منجر به رابطه
+$owner\_wealth: Person \leftrightarrow value$
+می شود. این رابطه با ترکیب رابطه ای\footnote{relational composition} 
+$home\_owner ;home\_value$
+نشان داده می شود که در آن
+\[
+p\mapsto v \in home\_owner ; home\_value  \Leftrightarrow 
+\\ (\exists h: Home . p\mapsto h \in home\_owner \wedge h\mapsto v \in home\_value)
+\]
+ترکیب رابطه ای همچنین ممکن است بصورت زیر نشان داده شود:
+\[ owner\_wealth=home\_value \circ home\_owner \]
+اجتماع دو رابطه نیز گاهی در عمل مورد نیاز است. فرض کنید که یک ورودی جدید بصورت 
+$aisling \mapsto muckross$
+اضافه شود. این وضعیت بصورت زیر نشان داده می شود.
+\[ home\_owner'= home\_owner \cup {aisling \mapsto muckross}\]
+حال فرض کنید می خواهیم اسامی تمام خانم هایی را که مالک خانه هستند، داشته باشیم. بنابراین باید رابطه
+$home\_owner$
+را محدود به حالاتی کنیم که عنصر اول زوج مرتب های آن، خانم باشند. توجه کنید که داریم
+$female: \pset Person$
+و
+$\{aisling , rebecca\} \subseteq female$
+.
+\[home\_owner =\{aisling \mapsto muckross, rebecca \mapsto nirvana,
+\\ lawrence \mapsto nirvana\}\]
+\[female \triangleleft home\_owner =\{ aisling \mapsto muckross , rebecca \mapsto nirvana\}\]
+$female \triangleleft home\_owner$
+رابطه ای است که زیر مجموعه $home\_owner$ است و در این رابطه ، اولین عنصر هر زوج مرتبی، $female$ است. عملگر  
+$\triangleleft$
+محدود کننده دامنه عبارت \footnote{termed domain restriction}
+است و ویژگی اصلی آن بصورت زیر بیان می شود:
+\[ x\mapsto y \in U \triangleleft R \Leftrightarrow (x \notin U \wedge x\mapsto y \in R)\]
+که در آن
+$R: X \leftrightarrow Y$
+و
+$U : \pset X$
+.
+عملگر دیگری تحت عنوان عملگر ضدمحدودیت دامنه \footnote{domain anti-restriction}
+وجود دارد که ویژگی اصلی آن بصورت زیر توصیف می شود:
+\[ x\mapsto y \in U \ndres R \Leftrightarrow (x \notin U \wedge x\mapsto y \in R)\]
+که در آن
+$R: X \leftrightarrow Y$
+و
+$U : \pset X$
+. 
+همچنین عملگرهای محدودیت برد \footnote{range restriction}
+با نماد $\triangleright$ و  ضدمحدودیت برد \footnote{range anti-restriction}
+با نماد $\rsub$ در زبان Z مورد استفاده قرار می گیرند. این عملگرها تعاریفی مشابه عملگرهای دامنه دارند با این تفاوت که برای برد تابع $x\mapsto y$ محدودیت ایجاد می کند.
+
+
+\section{توابع}
+یک تابع، بیانگر وابستگی بین اشیا نوع X با اشیا نوع Y می باشد که در آن هر شی از نوع X، تنها به یک شی از نوع Y وابسته است. به بیان دیگر می توان گفت که یک تابع مجموعه ای از زوج مرتب هاست که در آنها عنصر اول هر زوج مرتب، حداکثر با یک عنصر رابطه دارد. درحقیقت تابع نوع خاصی از رابطه است که در آن هریک از عناصر مجموعه دامنهف تنها با یک عنصر از مجموعه برد، می توانند رابطه داشته باشند. تابع ممکن است کامل یا جزئی باشد.
+\\
+یک تابع جزئی از X به Y که به صورت
+$ f: X\nrightarrow Y$
+نشان داده می شود، تابع 
+$f: X' \longrightarrow Y$
+برای یک زیرمجموعه سره $X'$ از X است. اگر زیرمجموعه $X'$ سره نباشد، یعنی اگر $X'=X$ 
+، تابع f را یک تابع کامل می گوییم. از توابع جزئی معمولا زمانی استفاده می شود که دامنه یک تابع مشخص نیست.
+تابع جزئی بصورت زیر تعریف می شود:
+\[
+\forall x:X ; y,z: Y . (x\longmapsto y \in f\wedge x \longmapsto z \in f \Rightarrow y=z)
+\]
+وابستگی بین x و y بصورت  $f(x)=y$ نشان داده می شود. این بدان مفهوم است که مقدار تابع جزئی f برای x، برابر y است. تابع کامل از X به Y، که با $f: X\rightarrow Y$ نشان داده می شود، یک تابع جزئی است که در آن هر عنصر مجموعه X به یک مقدار از مجموعه Y وابسته شده است.
+\[
+f: X \rightarrow Y \Leftrightarrow f: X\nrightarrow Y \wedge \dom f=X
+\]
+واضح است که هر تابع کامل، یک تابع جزئی است ولی هر تابع جزئی، یک تابع کامل نیست.
+\begin{figure}
+\centering
+\begin{schema}{TempMap}
+CityList : \pset City
+\\
+temp: City \nrightarrow Z
+\ST
+\dom temp = CityList
+\end{schema}
+\label{TempMap}
+\end{figure}
+عملگری که از تکرار در توصیف ها ناشی می شود، عبارت است از عملگر لغو
+\LTRfootnote{override}
+. به توصیف نگاشت دمایی که در 
+\ref{TempMap}
+ آمده است توجه کنید.یک مثال از نگاشت دما بصورت زیر می تواند باشد:
+\[
+ temp= \{ Cork \mapsto 17, Dublin \mapsto 19, London \mapsto 15\}
+\]
+حال مساله بروزرسانی دما مطرح می گردد، زمانیکه مثلا می خواهیم دمای Cork را تغییر دهیم. برای مثال
+$(Cork \mapsto 18)$
+.
+بنابراین یک نمودار دمای جدید با استفاده از نمودارهای قدیمی و عملگر لغو تابع خواهیم داشت که نتیجه آن 
+\[
+\{ Cork \mapsto 18, Dublin \mapsto 19, London \mapsto 15\}
+\]
+است. این عملیات بصورت زیر نوشته می شود:
+\[
+temp' = temp \oplus {Cork \mapsto 18}
+\]
+عملگر لغو تابع، دو تابعی را که از دارای یک نوع هستند باهم ترکیب کرده و تابع جدیدی با همان نوع ایجاد می کند. تاثیر عملگر لغو به این صورت است که ورودی
+$\{ Cork \rightarrow 17\}$
+از نمودار دما را حذف می کند و با ورودی 
+$\{ Cork \rightarrow 18 \}$
+جایگزین می کند.
+\\
+فرض کنید 
+$ f,g: X \nrightarrow Y$
+دو تابع جزئی هستند. 
+$f\oplus g$
+اینگونه تعریف می شود که f بوسیله g لغو شده است. تعریف 
+$f\oplus g$
+بصورت زیر است: 
+\[
+(f \oplus g)(x) = g(x) where x \in \dom g
+\\
+(f \oplus g)(x)= f(x) where x \notin \dom g \wedge x \in \dom f
+\] 
+این عملگر همچنین ممکن است بصورت زیر تعریف شود:
+\[
+ f\oplus g =((\dom g) \ndres f) \cup g
+ \]
+ در Z امضاهایی برای توابع injective، bijective و surjective وجود دارد. تابع injective یک تابع یک به یک است.
+ \[
+ f(x)=f(y) \Rightarrow x=y
+ \]
+ تابع surjective بصورت زیر تعریف می شود:
+ \[
+ Given  y \in Y , \exists  x \in X such  that f(x)=y
+ \]
+ تابع bijective نیز یک تابع یک به یک است که نشان می دهد مجموعه های X و Y با یکدیگر تناظر یک به یک دارند.
+  \\
+  Z شامل نشانگذاری عبارت لامبدا\footnote{Lambda}، برای تعریف توابع است.
+  برای مثال تابع:
+  \[ 
+  cube== \lambda x:N \bullet x*x*x
+  \]
+  ترکیب توابع f و g مشابه ترکیب روابط است.
+  
+  
+\section{دنباله ها}
+نوه تمامی دنباله های عناصر از یک مجموعه مانند $X$ف با نماد $seq X$ نشان داده می شود. دنباله بصورت 
+$< x_1,x_2, ..., x_n>$
+نمایش داده می شود. دنباله تهی به صورت $<>$ نشان داده می شود. دنباله ها ممکن است برای نشان دادن تغیر حالت یک متغیر در طول زمان، بکار برده شوند که در آن هر عنصر دنباله، نشاندهنده مقداری از متغیر در زمان های گسسته است.
+\\
+ دنباله ها همان توابع هستند  و یک دنباله از عناصر روی مجموعه $X$ ، یک تابع متناهی  از مجموعه اعداد طبیعی به $X$ است. یک تابع جزئی متناهی به نام $f$ از $X$ به $Y$ بصورت
+ $f: X \ffun Y$
+ تعریف می شود.
+ \\
+ یک دنباله متناهی از عناصر $X$ بصورت 
+ $f: N \ffun X$
+ نشان داده می شود. دامنه این تابع شامل تمام اعداد بین 1 و 
+ $\#f$
+  است که در آن 
+ $\# f$
+ کاردینالیتی $f$ است. این موضوع با استفاده از فرمول زیر نشان داده می شود.
+ \[seq \enspace X==\{f:N \ffun X | \dom \enspace f=1 .. \#f \bullet f\}\]
+ دنباله 
+ $<x_1,x_2, ...,x_n>$
+  که در بالا معرفی شد بصورت
+$\{1\longmapsto x_1, 2\longmapsto x_2, ... , n\longmapsto x_n \}$  
+  تعریف می شود.
+  \\
+  عملگرهای متنوعی برای دستکاری کردن دنباله ها وجود دارند. یکی از این عملگرها، عملگر الحاق است. فرض کنید 
+  $\sigma = < x_1, x_2, ... , x_n>$
+  و
+  $\tau =<y_1, y_2, ..., y_n>$
+  دو دنباله مفروض باشند. آنگاه
+  \[\sigma \cap \tau = <x_1, x_2, ..., x_n, y_1, y_2, ..., y_n>\]
+  سرآیند \footnote{hesd} یک دنباله غیرتهی، اولین عنصر آن دنباله است.
+ \[heads \enspace \sigma =head <x_1, x_2, ..., x_n> = x_1\]
+ ته\footnote{tail} یک دنباله غیرتهی، شامل تمامی عناصر دنبالهف غیر از عنصر اول آن، می باشد.
+ \[tail \enspace \sigma = tail <x_1, x_2, ..., x_n> = <x_2, x_3, ..., x_n>\]
+ فرض کنید
+ $f: X \longrightarrow Y$
+ و یک دنباله بصورت
+ $\sigma : seq X$
+ وجود دارد. آنگاه تابع نگاشت \footnote{map} $f$ را برای تمام عناصر $\sigma$ بکار می برد:
+ \[ map \enspace f \enspace \sigma = map f <x_1, x_2, ..., x_n> = <f(x_1), f(x_2), ... f(x_n)>\]
+ تابع نگاشت، همچنین با استفاده از ترکیب توابع بصورت زیر تعریف می شود:
+ \[ map \enspace f \enspace \sigma = \sigma ; f\]
+ معکوس\footnote{reverse} یک دنباله با استفاده از تابع $rev$ بدست می آید:
+ \[rev \enspace \sigma = rev <x_1, x_2, ..., x_n> = <x_n, ..., x_2, x_1> \]
+ 
+ \section{کیسه ها}
+ کیسه\footnote{bag} مشابه مجموعه است با این تفاوت که کیسه می تواند عنصر تکراری داشته باشد. یک کیسه از عناصر نوع X بصورت یک تابع جزئی تعریف می شود که دامنه آن، از نوع عناصر موجود در کیسه و برد آن، تمام اعداد مثبت است. تعریف یک کیسه از نوع $X$ بصورت زیر است:
+ \[bag \enspace X= X \nrightarrow \mathbb{N}_1.\]
+ به عنوان مثال یک کیسه از مهره ها را در نظر بگیرید. این کیسه ممکن است شامل 3 مهره آبی، 2 مهره قرمز و یک مهره سبز باشد. این کیسه را می توان بصورت 
+$B=[b, b, b, g, r, r]$ 
+ نشان داد. این کیسه از مهره ها همچنین بصورت زیر تعریف می شود:
+ \[ bag \enspace Marbel == Marbel \nrightarrow \mathbb{N}_1.\]
+ تابع $count$ تعداد رخدادهای یک عنصر موجود در کیسه را مشخص می کند. به عنوان مثال، در کیسه فوق،
+ $count \enspace Marbel \enspace b=3$
+ و
+$count \enspace Marbel \enspace y=0$ 
+،بنابراین هیچ مهره زردی در کیسه وجود ندارد. این مطلب  با استفاده از فرمول های زیر بیان می شود:
+\[count \enspace bag X \enspace y=0 \hspace{80pt} y\notin bag \enspace X\\
+count \enspace bag X \enspace y=(bag X)(y) \hspace{35pt} y\in bag \enspace X\]
+عضو $y$ در کیسه $X$ قرار دارد اگر و فقط اگر $y$ در دامنه کیسه $X$ باشد:
+\[y \enspace in \enspace bag X \Leftrightarrow y \in \dom(bagX)\]
+اجتماع دو کیسه 
+$B_1=[b, b, b, g, r, r]$
+و
+$B_2=[b, g, r, y]$
+بصورت
+$B_1\uplus B_2=[b, b, b, b, g, g, r, r, r, y]$
+نوشته می شود. عمل اجتماع با استفاده از فرمول های زیر توصیف می شود:
+\[
+(B_1\uplus B_2)(y)=B_2(y) \hspace{70pt} y\notin \dom \enspace B_1 \wedge y\in \dom \enspace B_2\\
+(B_1\uplus B_2)(y)=B_1(y) \hspace{70pt} y\in \dom \enspace B_1 \wedge y\notin \dom \enspace B_2\\
+(B_1\uplus B_2)(y)=B_1(y)+B_2(y) \hspace{30pt} y\in \dom \enspace B_1 \wedge y\in \dom \enspace B_2
+\]
+\begin{figure}
+\centering
+\begin{schema}{\bigtriangleup Borrow}
+stock : bag \enspace Good\\
+price: Good\rightarrow \mathbb{N}_1
+\where
+\dom \enspace stock \subseteq \dom \enspace price
+\end{schema}
+\caption{توصیف دستگاه فروش با استفاده از کیسه}
+\label{Borrow}
+\end{figure}
+ کیسه ممکن است برای ضبط تعدا موجودی هر محصول در یک انبار که بخشی از یک سیستم فروش است، بکار برده شود. شمای فوق (شکل\ref{Borrow})، تعداد اقلام باقیمانده از هر محصول را در یک سیستم فروش، مدلسازی می کند.
+ \\
+ عملیات یک ماشین فروش نیازمند عملگرهایی نظیر عملگر شناسایی مجموعه سکه های قابل قبول، بررسی کافی بودن مبلغ ورودی متناسب با قیمت کالا، بازگرداندن مبلغ اضافی به مشتری، و بروزرسانی مقدار موجود از هر کالا پس از انجام عملیات خرید، می باشد.
+ \section{شِما و ترکیب شِما} 
+توصیف Z در یکسری جعبه های بصری ارائه می شود که آنها را شِما یا سکیما\footnote{schema} گویند. این جعبه ها در حالت های خاصی به کار می روند . نشان گذاری هایی را برای نمایش حالت قبل و حالت بعد، بکار می گیرند. (به عنوان مثال s و s' که در آن s' حالت بعد از s است). شِماها، تمامی اطلاعات مرتبط باهم را برای شرح یک حالت، گروهبندی می کنند.
+\\
+عمگرهای مفیدی برای کار با شِماها وجود دارند مانند عملگر شمول شما\footnote{$schema \enspace inclusion$}، عملگر ترکیب شِما \footnote{schema composition} و استفاده از اتصال گزاره ها برای متصل کردن شِماها به یکدیگر.
+\\
+نماد $\Delta$ بصورت قراردادی نشاندهنده این است که شِمای حاضر بر حالت تاثیر می گذارد. در مقابل عملگر $\Xi$ به این معناست که حالت از شِما تاثیر نمی پذیرد. این قراردادها، قابلیت خوانایی توصیف را افزایش می دهند و امکان تعریف عملگرهای پیچیده تر را فراهم می کنند.
+\\
+عملگر ترکیب شِما باعث می شود که شِماهی جدیدی از شِماهای موجود مشتق گردد. شِمایی با نام $S_1$ ممکن است در بخش اعلان شِمای $S_2$ مورد استفاده قرار گیرد. تاثیر شمول به این نحو است که اعلان های موجود در $S_1$ ، حالا بخشی از اعلان های $S_2$ هستند و گزاره های $S_1$ و $S_2$ با یکدیگر ترکیب عطفی شده اند. اگر یک متغییر هم در $S_1$ و هم در $S_2$ تعریف شده باشد، باید نوع آن در هر دو شما یکسان باشد. 
+
+
+
+
+\begin{schema}{S_1}
+x,y: \enspace \mathbb{N}
+\where
+x+y > 2
+\end{schema}
+
+\begin{schema}{S_2}
+S_1 ; z: \mathbb{N}
+\where 
+z=x+y
+\end{schema}
+نتیجه اینکه
+ $S_2$
+  شامل اعلان ها و گزاره های
+   $S_1$
+   است (تصویر \ref{fig 3-2}).
+
+\begin{figure}
+\centering
+\begin{schema}{S_2}
+x,y : \enspace \mathbb{N}
+\\
+z:\mathbb{N}
+\where
+x+y >2
+\\
+z=x+y
+\end{schema}
+\caption{شمول دو شِما}
+\label{fig 3-2}
+\end{figure}
+دو شِما ممکن است توسط اتصال های گزاره ای نظیر 
+$S_1 \land S_2$
+،
+$S_1 \wedge S_2$
+،
+$S_1 \Rightarrow S_2$
+و یا
+$S_1 \Leftrightarrow S_2$
+به یکدیگر متصل شوند.
+شِمای 
+$S_1 \wedge S_2$
+ باعث می شود که بخش اعلان دو شِمای $S_1$ و $S_2$ با یکدیگر ادغام شوند و سپس گزاره های آنها نیز بوسیله عملگر منطقی ترکیب فصلی $\wedge$ با یکدیگرف ترکیب شوند. برای مثال 
+ $S=S_1 \wedge S_2$
+ در شکل \ref{fig 3-3} نشان داده شده است.
+ 
+
+ 
+\begin{figure}
+\centering
+\begin{schema}{S}
+x,y : \enspace \mathbb{N}
+\\
+z:\mathbb{N}
+\where
+x+y >2 \wedge z=x+y
+\end{schema}
+\caption{ترکیب فصلی دو شمای $S_1$ و $S_2$}
+\label{fig 3-3}
+\end{figure}
+
+دو عملگر شمول شِما و اتصال شِماها، برای تبدیل زیر نوع ها به انواع بیشینه، از نرمال سازی استفاده می کنند. از طرفی گزاره ها نیز برای محدود کردن انواع بیشینه به زیرنوع ها بکار می روند. این عمل منجر به جایگزینی اعلان متغیرها می شود. به عنوان مثال 
+$u: 1 . . 35$ با $u:\mathbb{Z}$ جایگزین می شود و گزاره 
+$u>0 \enspace and \enspace u<36$
+به بخش گزاره شِما اضافه می گردد.
+\\
+دو نماد $\Delta$ و $\Xi$ به کرات در تعریف شِماها بکار می روند. وقتی که نشان گذاری 
+$\Delta TempMap$
+ در توصیف یک شِما، دیده می شود به این مفهوم است که این شِما، حالت را تغییر می دهد.
+ \[ 
+ \Delta TempMap= TempMap \land TempMap'
+ \]
+ شکل مفصل تر $\Delta TempMap$  در تصویر\ref{fig 3-4} توصیف شده است.
+ 
+ \begin{figure}
+\centering
+\begin{schema}{\Delta TempMap}
+CityList, CityList' : \enspace \mathbb{P}\enspace City
+\\
+temp , temp': \enspace City\nrightarrow Z
+\where
+\dom temp =CityList
+\\
+\dom temp'=CityList'
+\end{schema}
+\caption{کاربرد عملگر $\Delta$}
+\label{fig 3-4}
+\end{figure}
+
+نشان گذاری $\Xi$ برای توصیف عملگرهایی استفاده می شود که منجر به تغییر حالت نمی شوند. نمونه ای از این نشان گذاری در شکل \ref{fig 3-5} قابل مشاهده است.
+
+\begin{figure}
+\centering
+\begin{schema}{\Xi TempMap}
+\Delta TempMap
+\where
+CityList =CityList'
+\\
+temp=temp'
+\end{schema}
+\caption{کاربرد عملگر $\Xi$}
+\label{fig 3-5}
+\end{figure}
+
+عملگر ترکیب شِما باعث می شود که توصیف های جدیدی از روی توصیف های موجود ساخته شوند. ترکیب شِما، مقادیر حالت بعدی یک شِما را به مقادیر حالت قبلی شِمای دیگری، ربط می دهد. ترکیب دو شِمای $S$ و $T$ 
+،
+$(S;T)$
+شامل چهار مرحله است که در جدول
+\ref{tab3-1}
+
+
+نشان داده شده است.
+\begin{table}[!t]
+\centering
+\caption{
+مراحل ترکیب شِما
+}
+\begin{tabular}{cc}
+\toprule
+گام & روال  
+\\
+\midrule
+1. &  تمامی مقادیر حالت "بعدی" موجود در $S$، با نام های جدید، بازنامگذاری می شوند:
+ $S[s^+ / s']$
+\\
+2. & تمامی مقادیر حالت "قبلی" موجود در $T$ با همان نام های جدید، بازنامگذاری می شوند:
+$S[s^+ / s]$
+\\
+3. & ترکیب عطفی دو شِمای جدید ایجاد می شود:
+$S[s^+/s'] \land T[s^+/s] $
+\\
+4.& متغیرهایی که در گام های 1 و 2 معرفی شده اند، مخفی می شوند.
+$ S;T=(S[s^+/s'] \land T[s^+/s]) (s^+) $
+
+\\ \bottomrule
+\end{tabular}
+\label{tab3-1}
+\end{table}
+
+
+چهار شمای $S$، $T$، $T_1$ و $S_1$  در شکل 
+\ref{fig 3-6}
+نشان داده شده است.
+\begin{figure}
+\centering
+\begin{schema}{S}
+x,x',y ? : \mathbb{N}
+\where
+x'=y?-2
+\end{schema}
+
+\begin{schema}{T}
+x,x'  : \mathbb{N}
+\where
+x'=x+1
+\end{schema}
+
+\begin{schema}{S_1}
+x,x^+, y?  : \mathbb{N}
+\where
+x^+=y?-2
+\end{schema}
+
+\begin{schema}{T_1}
+x^+, x': \mathbb{N}
+\where
+x'=x^+1
+\end{schema}
+\caption{معرفی چهار شِمای $S$، $T$، $S_1$ و $T_1$}
+\label{fig 3-6}
+\end{figure} 
+
+ این شِماها در تصویر
+\ref{fig 3-7}
+با یکدیگر ترکیب شده اند.
+
+
+
+
+$S_1$ و $T_1$ نتایج گام های 1 و 2 را نشان می دهند. 
+$x'$ در $S$ با $s^+$ بازنامگذاری شده است و $x$ در $T$ با $x^+$ بازنامگذاری شده است. نتایج گام های 3 و 4 را نیز در تصویر
+\ref{fig 3-7}
+می توانید مشاهده کنید.
+
+\begin{figure}[ht]
+\centering
+
+\begin{schema}{S_1 \land T_1}
+x,x^+, x', y? : \mathbb{N}
+\where
+x^+=y?-2\\
+x'=x^+1
+\end{schema}
+
+
+
+\begin{schema}{S;T}
+x, x', y? : \mathbb{N}
+\where
+\exists x^+: \mathbb{N} \bullet \\
+(x^+=y?-2
+\\x' = x^+ +1)
+\end{schema}
+
+\caption{ترکیب شِما}
+\label{fig 3-7}
+\end{figure} 

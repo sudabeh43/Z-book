@@ -1,0 +1,308 @@
+\chapter{ توصیف سیستم فایل}\label{chapter7}
+ در این بخش به ارائه یک مورد مطالعه که از زبان $Z$ استفاده کرده است می پردازیم. ما نشان می دهیم که چگونه شِماها برای توصیف یک سیستم فایل ساده مورد استفاده قرار می گیرند. این شِماها برای نشان دادن ساختمان داده ها و عملیات روی آنها استفاده می شوند.
+ همچنین نشان داده خواهد شد که چگونه پیش شرط های عملیات های مختلف قابل محاسبه است و چگونه می توان توصیف یک فایل تنها را به یک مؤلفه نمایه شده از یک سیستم فایل ارتقا داد. 
+\section{فاصل برنامه نویسی}\index{a programming interface}
+ فاصل برنامه نویسی برای یک سیستم فایل، دقیقا مشخص می کند که چه چیزی قرار است مدل شود. این فاصل لیستی از عملیات روی سیستم فایل است که با شرح تاثیر آنها کامل شده است. برای مثال: عملیات $create$ ممکن است برای تولید یک فایل جدید بکار برده شود و عملیات $read$ که برای دسترسی به داده از یک فایل موجود استفاده شود.
+ \\
+ عملیات به دو دسته تقسیم شده اند: آنهایی که بر داده های موجود در یک فایل تاثیر می گذارند و آنهایی که بر سیستم فایل بطور کلی تاثیر خواهند گذاشت. در سطح فایل، چهار عملیات زیر وجود دارند:
+ \\
+ خواندن
+ \LTRfootnote{read}
+  : برای خواندن یک بخش از داده، از فایل، استفاده می شود.
+ \\
+ نوشتن
+ \LTRfootnote{write}
+ : برای نوشتن بخش از داده بر روی فایل، استفاده می شود.
+ \\
+ اضافه کردن
+ \LTRfootnote{add}
+ : برای اضافه کردن یک بخش جدید داده به یک فایل استفاده می شود.
+ \\
+ حذف کردن
+ \LTRfootnote{delete}
+ : برای حذف بخشی از داده موجود در فایل، استفاده می شود.
+ \\
+عملیات اضافه کردن و نوشتن، با یکدیگر متفاوت اند. عملیات اول این فرصت را فراهم می کند که فایل را با استفاده از داده های جدید گسترش دهیم و عملیات دوم، بخشی از بخش های موجود در فایل را بازنویسی می کند. 
+\\
+رابط برنامه نویسی نیز شامل عملیاتی است که بر روی فایل ها انجام می شوند. در زیر چهار نمونه از این عملیات ها نشان می دهیم:
+\\
+ایجاد کردن
+\LTRfootnote{create}
+:برای ایجاد یک فایل جدید به کار می رود.
+\\
+  
+
+
+
+\section{عملیات بر روی فایل ها}\index{operations upon files}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{File}}
+\mathit{contents: Key \nrightarrow Data}
+\end{schema}
+\caption{}
+\label{File}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{FileInit}}
+\mathit{File'}
+\ST
+\mathit{contents'= \varnothing}
+\end{schema}
+\caption{}
+\label{FileInit}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{schema}{\triangle \mathit{File}}
+\mathit{File}\\
+\mathit{File'}
+\end{schema}
+\caption{}
+\label{deltafile}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\Xi \mathit{File}}
+\triangle \mathit{File}
+\ST
+\theta \mathit{File}= \theta \mathit{File'}
+\end{schema}
+\caption{}
+\label{xifile}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{Read_0}}
+\Xi \mathit{File}\\
+\mathit{k?:Key}\\
+\mathit{d!:Data}
+\ST
+\mathit{k? \in \dom \enspace contents}\\
+\mathit{d! = contents \enspace k?}
+\end{schema}
+\caption{}
+\label{read0}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{Write_0}}
+\triangle \mathit{File}\\
+\mathit{k?:Key}\\
+\mathit{d!:Data}
+\ST
+\mathit{k? \in \dom \enspace contents}\\
+\mathit{contents' = contents \oplus \{k? \mapsto d? \}}
+\end{schema}
+\caption{}
+\label{write0}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{Add_0}}
+\triangle \mathit{File}\\
+\mathit{k?:Key}\\
+\mathit{d!:Data}
+\ST
+\mathit{k? \notin \bold{dom} \enspace contents}\\
+\mathit{contents' = contents \cup \{k? \mapsto d?\}}
+\end{schema}
+\caption{}
+\label{add0}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{Delete_0}}
+\delta \mathit{File}\\
+\mathit{k?:Key}
+\ST
+\mathit{k? \in \bold{dom} \enspace contents}\\
+\mathit{contents' = \{k?\} \ndres contents}
+\end{schema}
+\caption{}
+\label{delete0}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{KeyError}}
+\Xi \mathit{File}\\
+\mathit{k?:Key}\\
+\mathit{r!:Report}
+\end{schema}
+\caption{}
+\label{keyerror}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{KeyNotInUse}}
+ \mathit{KeyError}
+\ST
+\mathit{k? \notin \bold{dom} \enspace contents}\\
+\mathit{r! = key\_in\_use}
+\end{schema}
+\caption{}
+\label{keynitinuse}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{KeyInUse}}
+\mathit{KeyError}
+\ST
+\mathit{k? \in \bold{dom} \enspace contents}\\
+\mathit{r! = key\_in\_use}
+\end{schema}
+\caption{}
+\label{keyinuse}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{Success}}
+\mathit{r!:Report}
+\ST
+\mathit{r!=okay}
+\end{schema}
+\caption{}
+\label{read0}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{axdef}
+\mathit{contents, \enspace contents':Key \nrightarrow Data}\\
+\mathit{k?:Key}\\
+\mathit{d!:Data}\\
+\mathit{r!:Report}
+\ST
+\mathit{(k? \in \dom \enspace contents} \enspace \wedge \\
+\enspace \mathit{d!=contents \enspace k?} \enspace \wedge \\
+\enspace \mathit{contents'=contents} \enspace \wedge \\
+\enspace \mathit{r!=okay)}\\
+\land \\
+\mathit{(k? \notin \dom \enspace contents} \enspace \wedge \\
+\enspace \mathit{contents'=contents} \enspace \wedge \\
+\enspace \mathit{r! = key\_not\_in\_use)}
+\end{axdef}
+\caption{}
+\label{readoperation}
+\end{figure}
+
+
+\section{سیستم فایل}\index{a file system}
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{System}}
+\mathit{file:Name \nrightarrow File}\\
+\mathit{open: \mathbb{P}Name}
+\ST
+\mathit{open \subseteq \dom \enspace file}
+\end{schema}
+\caption{}
+\label{system}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{SystemInit}}
+\mathit{System'}
+\ST
+\mathit{file'=\emptyset}
+\end{schema}
+\caption{}
+\label{systeminit}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{Promote}}
+\mathit{\Delta System}\\
+\mathit{\Delta File}\\
+\mathit{n? :Name}
+\ST
+\mathit{n? \in open}\\
+\mathit{file \enspace n?=\theta File}\\
+\mathit{file' \enspace n? = \theta File'}\\
+\mathit{\{n?\} \ndres file=\{n?\} \ndres file'}\\
+\mathit{open'=open}
+\end{schema}
+\caption{}
+\label{promote}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{schema}{\mathit{FileAccess}}
+\mathit{\Delta System}\\
+\mathit{n?:Name}
+\ST
+\mathit{n? \in \bold{dom} \enspace file}\\
+\mathit{file'=file}
+\end{schema}
+\caption{}
+\label{FileAccess}
+\end{figure}
+
+\section{تحلیل رسمی}\index{formal analysis}
+
+
+\begin{figure}
+\centering
+\begin{schema}
+\mathit{System}\\
+\mathit{n?:Name}
+\ST
+\exists \mathit{r! : Report \bold}\\
+\hspace{20pt}\mathit{n? \notin \dom \enspace file}\\
+\hspace{20pt} \mathit{r! = file\_does\_not\_exist}
+\end{schema}
+\caption{}
+\label{system2}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{schema}
+\mathit{System}\\
+\mathit{n?:Name}
+\ST
+\mathit{n? \in open}
+\end{schema}
+\caption{}
+\label{system2}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\begin{schema}
+\mathit{System}\\
+\mathit{n?:Name}
+\end{schema}
+\caption{}
+\label{system3}
+\end{figure}

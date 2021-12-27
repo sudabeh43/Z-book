@@ -1,0 +1,58 @@
+\BOOKMARK [0][-]{section*.1}{پیش‌گفتار}{}% 1
+\BOOKMARK [0][-]{chapter.1}{مقدمه ای بر توصیف رسمی برنامه ها و سیستم ها}{}% 2
+\BOOKMARK [1][-]{section.1.1}{اولین مثال از توصیف رسمی یک برنامه}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{معرفی Z}{}% 4
+\BOOKMARK [0][-]{chapter.3}{عناصر Z}{}% 5
+\BOOKMARK [1][-]{section.3.1}{مجموعه ها}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.2}{رابطه ها}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.3}{توابع}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.4}{دنباله ها}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.5}{کیسه ها}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.6}{شِما و ترکیب شِما}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{ چند نمونه ساده توصیف Z}{}% 12
+\BOOKMARK [1][-]{section.4.1}{نمونه اول: کتابچه تولد}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{نمونه دوم: تجزیه متن به واژگان}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.3}{نمونه سوم: سیستم کنترل اسناد}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.4}{نمونه چهارم: ماشین حالت متناهی}{chapter.4}% 16
+\BOOKMARK [2][-]{subsection.4.4.1}{دیاگرام انتقال حالت}{section.4.4}% 17
+\BOOKMARK [2][-]{subsection.4.4.2}{جدول انتقال حالت}{section.4.4}% 18
+\BOOKMARK [0][-]{chapter.5}{ مستندسازی سرویس شبکه با استفاده از Z}{}% 19
+\BOOKMARK [1][-]{section.5.1}{مقدمه}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{توصیف سرویس}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{مستندسازی سرویس}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{ واژگان ماشین}{}% 23
+\BOOKMARK [1][-]{section.6.1}{مقدمه}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.2}{سازماندهی واژه}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.3}{عملیات روی واژگان}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{ توصیف سیستم فایل}{}% 27
+\BOOKMARK [1][-]{section.7.1}{فاصل برنامه نویسی}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.2}{عملیات بر روی فایل ها}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.3}{سیستم فایل}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.4}{تحلیل رسمی}{chapter.7}% 31
+\BOOKMARK [0][-]{chapter.8}{نمونه هایی از کدهای لاتک جهت آموزش}{}% 32
+\BOOKMARK [1][-]{section.8.1}{یادآوری حدهای یک‌طرفه و کاربرد آن‌ها}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.2}{انتگرال معین و نامعین و کاربرد آن در مهندسی}{chapter.8}% 34
+\BOOKMARK [2][-]{subsection.8.2.1}{انتگرال معین}{section.8.2}% 35
+\BOOKMARK [2][-]{subsection.8.2.2}{منحنی‌های قاطع یکدیگر}{section.8.2}% 36
+\BOOKMARK [1][-]{section.8.3}{محاسبهٔ طول منحنی‌ها با روشی ابتکاری}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.4}{انتگرال‌های ناسره}{chapter.8}% 38
+\BOOKMARK [1][-]{section.8.5}{محاسبهٔ حجم جسم‌های حاصل از دوران}{chapter.8}% 39
+\BOOKMARK [2][-]{subsection.8.5.1}{حجم حاصل از دوران حول محور xها}{section.8.5}% 40
+\BOOKMARK [2][-]{subsection.8.5.2}{حجم حاصل از دوران حول محور yها}{section.8.5}% 41
+\BOOKMARK [1][-]{section.8.6}{قواعد انتگرال‌گیری نامعین}{chapter.8}% 42
+\BOOKMARK [1][-]{section.8.7}{تکنیک‌های انتگرال‌گیری}{chapter.8}% 43
+\BOOKMARK [2][-]{subsection.8.7.1}{انتگرال‌گیری جزء به جزء}{section.8.7}% 44
+\BOOKMARK [2][-]{subsection.8.7.2}{جانشینی ساده‌کننده}{section.8.7}% 45
+\BOOKMARK [2][-]{subsection.8.7.3}{کسرهای جزیی}{section.8.7}% 46
+\BOOKMARK [1][-]{section.8.8}{ظاهر شدن انتگرال اصلی در فرایند انتگرال‌گیری}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.9}{سه جانشینی بنیادی}{chapter.8}% 48
+\BOOKMARK [1][-]{section*.72}{تمرین‌ها}{chapter.8}% 49
+\BOOKMARK [1][-]{section*.74}{تمرین‌ها}{chapter.8}% 50
+\BOOKMARK [0][-]{appendix.Alph1}{چند یادآوری اساسی}{}% 51
+\BOOKMARK [1][-]{section.Alph1.1}{استقرای ریاضی و چند مثال}{appendix.Alph1}% 52
+\BOOKMARK [1][-]{section.Alph1.2}{مشتق‌های جزئی}{appendix.Alph1}% 53
+\BOOKMARK [1][-]{section.Alph1.3}{بسط تیلور}{appendix.Alph1}% 54
+\BOOKMARK [1][-]{section.Alph1.4}{مختصات قطبی}{appendix.Alph1}% 55
+\BOOKMARK [1][-]{section.Alph1.5}{بردارها در فضا و خواص آن‌ها}{appendix.Alph1}% 56
+\BOOKMARK [1][-]{section.Alph1.6}{ضرب برداری}{appendix.Alph1}% 57
+\BOOKMARK [0][-]{section*.76}{پاسخ تمرین‌های برگزیده}{}% 58

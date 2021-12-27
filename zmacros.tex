@@ -1,0 +1,397 @@
+% ZMACROS.TEX		Mike Spivey	July 1987
+\documentstyle[palatino,11pt,zed]{article}
+\begin{document}
+\title{Printing Z with \LaTeX}
+\author{Mike Spivey}
+\date{15th September 1987}
+\maketitle
+
+\section{Introduction}
+
+This note describes a small package of \LaTeX\ macros for printing
+Z specifications.
+I put these together specifically for printing my book on Z semantics,
+so the package only provides features I needed for that, and your
+favourite Z constructs may be missing.
+On the other hand, I've put quite a lot of work into getting
+the constructs which {\em are\/} there to look right, at
+least to my eyes. If the package doesn't do what you want,
+at least it gives you something to start from.
+The package does several related things for you:
+\begin{enumerate}
+\item   It loads the two fonts of extra symbols from the American
+        Mathematical Society and defines mnemonics for the Z symbols
+        they contain.
+\item   It defines macros to fudge some Z symbols (e.g. $\pinj$) which
+        don't appear in any of our fonts.
+\item   It fixes the way \TeX\ sets letters in mathematical formulas so
+        that multi-character identifiers look better.
+\item   It provides ways to set the various brands of `boxed mathematics'
+        which appear in Z specifications.
+\end{enumerate}
+
+\section{Loading the macros}
+
+The package is kept in a file {\tt zed.sty}, so to load it at
+the start of a \LaTeX\ run, you just begin with
+\begin{quote}
+\begin{verbatim}
+\documentstyle[11pt,zed]{article}
+\end{verbatim}
+\end{quote}
+or something like it.
+At PRG, the package only works with the eleven-point base size at
+present: the extra-symbols fonts it loads are only available at
+this size on the LBP--10.
+
+\section{The care and feeding of schemas}
+
+To print the schema
+\begin{schema}{PhoneDB}
+    known: \power NAME \\
+    phone: NAME \pfun PHONE
+\where
+    known = \dom phone
+\end{schema}
+you just say
+\begin{quote}
+\begin{verbatim}
+\begin{schema}{PhoneDB}
+    known: \power NAME \\
+    phone: NAME \pfun PHONE
+\where
+    known = \dom phone
+\end{schema}
+\end{verbatim}
+\end{quote}
+What could be simpler?
+If you want a schema with no name, just a horizontal rule at the top,
+use the \verb|schema*| environment instead.
+In fact, here is an example:
+% \begin{schema*}
+%	known: \power NAME \\
+%	phone: NAME \pfun PHONE
+% \where
+%	known = \dom phone
+% \end{schema*}
+If you like the name set flush left, you can use the \verb|\leftschemas|
+declaration to get the following effect:
+\begin{leftschemas}
+\begin{schema}{PhoneDB}
+    known: \power NAME \\
+    phone: NAME \pfun PHONE
+\where
+    known = \dom phone
+\end{schema}
+\end{leftschemas}
+As well as these, there's \verb|axdef|
+for axiomatic definitions: to print
+\begin{axdef}
+    policy: \power_1 RESOURCE \fun RESOURCE
+\where
+    \forall S: \power_1 RESOURCE \spot \\
+\t1         policy(S) \in S,
+\end{axdef}
+you say
+\begin{quote}
+\begin{verbatim}
+\begin{axdef}
+    policy: \power_1 RESOURCE \fun RESOURCE
+\where
+    \forall S: \power_1 RESOURCE \spot \\
+\t1         policy(S) \in S,
+\end{axdef}
+\end{verbatim}
+\end{quote}
+The strange hint \verb|\t1| in this example makes the corresponding
+line in the output have one helping of indentation.
+As things get more nested, you can say \verb|\t2|, \verb|\t3|, and so on.
+But if you should ever get beyond \verb|t9|, you'll need to use braces
+around the argument: \verb|\t{10}|, and you'd better look for some way
+to simplify your specification!
+The syntax of these little tab marks is a bit strange, I'm afraid,
+but I find them more convenient than other possibilities. They're short,
+and they don't get longer as the tabbing gets deeper, within reason,
+so they can be tucked in neatly on the left, well away from the
+maths.
+The size of `helping' you get with \verb|\t| is a parameter
+\verb|\zedindent|, and the default is 2em.
+
+Two other things to notice here are the little space between the
+$\forall$ and the following $S$, and the use of \verb|\spot| for
+the bullet $\spot$.
+These macros produce symbols of the right type for \TeX's spacing
+rules to insert spaces automatically.
+
+For generic definitions, there's the \verb|gendef| environment:
+you can get a neat double-topped box like
+\begin{gendef}{I,X,Y}
+    map: (X \pfun Y) \fun (I \pfun X) \fun (I \pfun Y)
+\where
+    map\,f = \lambda s: I \pfun X \mid
+        \ran s \subseteq \dom f \spot f \circ s
+\end{gendef}
+by typing
+\begin{quote}
+\begin{verbatim}
+\begin{gendef}{I,X,Y}
+    map: (X \pfun Y) \fun (I \pfun X) \fun (I \pfun Y)
+\where
+    map\,f = \lambda s: I \pfun X \mid
+        \ran s \subseteq \dom f \spot f \circ s
+\end{gendef}
+\end{verbatim}
+\end{quote}
+You should take note of the thin space I've inserted between $map$ and $f$
+in this example: if this is omitted, the input \verb|map f| gives
+$map f$, because \TeX\ ignores spaces in math mode.
+There's also a \verb|gendef*| environment for generic definitions with no
+parameters.
+
+If a schema or other box contains more than one predicate below the
+line, it often looks better to add a tiny vertical space between
+them, as in this example:
+\begin{schema}{AddPhone}
+    \Delta PhoneDB \\
+    name?: NAME \\
+    number?: PHONE
+\where
+    name? \notin known
+\also
+    phone' = phone \oplus \{name? \mapsto number?\}
+\end{schema}
+This is done with the command \verb|\also|, which behaves syntactically
+like \verb|\where|:
+\begin{quote}
+\begin{verbatim}
+\begin{schema}{AddPhone}
+    \Delta PhoneDB \\
+    name?: NAME \\
+    number?: PHONE
+\where
+    name? \notin known
+\also
+    phone' = phone \oplus \{name? \mapsto number?\}
+\end{schema}
+\end{verbatim}
+\end{quote}
+Note that \verb|\also| is provided {\em instead\/} of the
+optional argument to \verb|\\|
+which \LaTeX\ provides in other environments.
+
+\section{Other mathematical displays}
+
+The \verb|zed| environment can be used to set multi-line formulas without
+an enclosing box: it is useful for given-set declarations, theorems, and the
+miscellaneous bits of mathematics that don't come in a box:
+\begin{zed}
+    \forall n: \nat \spot \\
+\t1         n+n \in even.
+\end{zed}
+is printed from the input
+\pagebreak[3]
+\begin{quote}
+\begin{verbatim}
+\begin{zed}
+    \forall n: \nat \spot \\
+\t1         n+n \in even.
+\end{zed}
+\end{verbatim}
+\end{quote}
+The formula \verb|\begin{zed} ... \end{zed}| may be abbreviated to
+\verb|\[ ... \]|; the \verb|zed| environment is a generalization of the
+\verb|displaymath| environment of \LaTeX, so this redefinition of
+commands is fairly benign. Notice that the maths is set flush left on the
+same indentation as schemas and their friends.
+Here too you can use \verb|\also| for a little extra space
+between lines.
+
+For algebraic-style proofs, there is the \verb|argue| environment.
+This is like the \verb|zed| environment, but the separation between
+lines is increased a little, and page breaks may occur between lines.
+The intended use is for arguments like this:
+\begin{argue}
+    rev(append(cons(x,s),t)) \\
+\t1     = rev(cons(x,append(s,t))) \\
+\t1     = append(rev(append(s,t)),cons(x,nil)) \\
+\t1     = append(append(rev(t),rev(s)),cons(x,nil))
+                \quad \hbox{by hypothesis} \\
+\t1     = append(rev(t),append(rev(s),cons(x,nil))) \\
+\t1     = append(rev(t),rev(cons(x,s))).
+\end{argue}
+Here, again, is the input:
+\begin{quote}
+\begin{verbatim}
+\begin{argue}
+    rev(append(cons(x,s),t)) \\
+\t1     = rev(cons(x,append(s,t))) \\
+\t1     = append(rev(append(s,t)),cons(x,nil)) \\
+\t1     = append(append(rev(t),rev(s)),cons(x,nil))
+                \quad \hbox{by hypothesis} \\
+\t1     = append(rev(t),append(rev(s),cons(x,nil))) \\
+\t1     = append(rev(t),rev(cons(x,s))).
+\end{argue}
+\end{verbatim}
+\end{quote}
+When the left-hand side is long, I find this style better than the
+\LaTeX\ \verb|eqnarray| style, which wastes a lot of space.
+
+Another brand of box is the inference rule; the rule
+\begin{infrule}
+    \Gamma \shows P
+\derive[x \notin freevars(\Gamma)]
+    \Gamma \shows \forall x \spot P
+\end{infrule}
+comes from the input
+\begin{quote}
+\begin{verbatim}
+\begin{infrule}
+    \Gamma \shows P
+\derive[x \notin freevars(\Gamma)]
+    \Gamma \shows \forall x \spot P
+\end{infrule}
+\end{verbatim}
+\end{quote}
+Note the optional argument to \verb|\derive|: it is a side-condition of
+the rule.
+
+Finally, there's the \verb|syntax| environment, used for
+making displays like this:
+\begin{syntax}
+    EXPR & ::= & IDENT      & identifier \\
+         &  |  & EXPR\;EXPR & application \\
+         &  |  & \lambda IDENT \spot EXPR
+                            & lambda-abstraction.
+\end{syntax}
+from input like this:
+\begin{quote}
+\begin{verbatim}
+\begin{syntax}
+    EXPR & ::= & IDENT      & identifier \\
+         &  |  & EXPR\;EXPR & application \\
+         &  |  & \lambda IDENT \spot EXPR
+                            & lambda-abstraction.
+\end{syntax}
+\end{verbatim}
+\end{quote}
+This kind of thing is useful when you're describing a language,
+and it can also be used for data-type definitions.
+I've even---time for a confession---used it once for a fragment
+of VDM\@.
+The final column is optional:
+just omit the third \verb|&| if you don't want it.
+
+\section{Inside the boxes}
+
+\makeatletter
+\def\nota{\interzedlinepenalty=\interdisplaylinepenalty
+        \@zed\halign\bgroup\strut\hbox to3em{$##$\hfil}\tabskip=0pt&##\hfil\cr}
+\let\endnota=\endzed
+\makeatother
+
+Now for the details of what you can put inside the boxes.
+The first thing to notice is that multi-letter identifiers look
+better than they do with vanilla \LaTeX: instead of
+$\mit specifications$, you get $specifications$.
+The letters haven't been spread apart, and the ligature $fi$ has been
+used.
+
+Almost all of the mathematical symbols of \LaTeX\ can be used, plus
+a few extra ones listed below.
+The mnemonics I've chosen may seem a little mad, but that's life.
+The \LaTeX\ symbols you can't use are the ones whose
+names have been redefined:
+mostly these are the same symbol, but with the spacing fixed for
+use in Z specifications.
+First, there are some new arrows, and some new names for old ones:
+\begin{nota}
+    \rel & \verb|\rel| \\
+    \fun & \verb|\fun| \\
+    \inj & \verb|\inj| \\
+    \surj & \verb|\surj| \\
+    \bij & \verb|\bij| \\
+    \implies & \verb|\implies| \\
+    \iff & \verb|\iff|
+\end{nota}
+There are also `accents' \verb|\p| and \verb|\f| which put one and two
+crossings repectively over the following arrow.
+So \verb|\p\fun| gives $\p\fun$ and (if you insist)
+\verb|\f\bij| gives $\f\bij$.
+There are also some new binary operations:
+\begin{nota}
+    \comp & \verb|\comp| \\
+    \dres & \verb|\dres| \\
+    \rres & \verb|\rres| \\
+    \ndres & \verb|\ndres| \\
+    \nrres & \verb|\nrres| \\
+    \cross & \verb|\cross| \\
+    \filter & \verb|\filter| \\
+    \upto & \verb|\upto| \\
+    \div & \verb|\div| \\
+    \mod & \verb|\mod| \\
+    \cat & \verb|\cat|
+\end{nota}
+and some new operators:
+\begin{nota}
+    \dom & \verb|\dom| \\
+    \ran & \verb|\ran| \\
+    \pre & \verb|\pre| \\
+    \id & \verb|\id| \\
+    \seq & \verb|\seq| \\
+    \bag & \verb|\bag| \\
+    \forall & \verb|\forall| \\
+    \exists & \verb|\exists| \\
+    \lambda & \verb|\lambda| \\
+    \mu & \verb|\mu| \\
+    \power & \verb|\power| \\
+    \finset & \verb|\finset| \\
+    \dcat & \verb|\dcat|
+\end{nota}
+The unique quantifier $\exists_1$ can be typeset as \verb|\exists_1|.
+There are a couple of new ordinary symbols:
+\begin{nota}
+    \empty & \verb|\empty| \\
+    \nat & \verb|\nat| \\
+    \num & \verb|\num|
+\end{nota}
+as well as a few fancy brackets:
+\begin{nota}
+    \limg\;\rimg & \verb|\limg \rimg| \\
+    \lbag\;\rbag & \verb|\lbag \rbag| \\
+    \ldata\;\rdata & \verb|\ldata \rdata| \\
+    \lblot\;\rblot & \verb|\lblot \rblot|
+\end{nota}
+Finally, the following bits and pieces come with the right spacing for Z:
+\begin{nota}
+    \land & \verb|\land| \\
+    \lor & \verb|\lor| \\
+    \lnot & \verb|\lnot| \\
+    \widehat= & \verb|\defs| \\
+    \hide & \verb|\hide| \\
+    \project & \verb|\project| \\
+    \semi & \verb|\semi| \\
+    \vdash & \verb|\shows| \\
+    \spot & \verb|\spot|
+\end{nota}
+Some of these are duplicates of binary operators listed above, but with
+names more appropriate to their use in schema-expressions; there is
+also a little more spacing in these variants.
+And that's about it.
+
+\section{Style parameters}
+
+\begin{description}
+\item[\tt\string\zedindent] The indentation for mathematical text.
+	By default, this is the same as \verb|\leftmargini|, the indentation
+	used for list environments.
+\item[\tt\string\zedleftsep] The space between the vertical line on the left
+	of schemas, etc., and the maths inside. The default is 1em.
+\item[\tt\string\zedtab] The unit of indentation used by \verb|\t|. The default
+	is 2em.
+\item[\tt\string\zedbar] The length of the horizontal bar in the middle of a
+	schema. The default is 6em.
+\item[\tt\string\leftschemas] A declaration which makes schema names be
+	set flush left. Use it in the document preamble.
+\end{description}
+
+\end{document}
